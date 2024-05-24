@@ -206,7 +206,7 @@ struct CFFillterPPPhi {
   bool isSelectedTrackProton(T const& track)
   {
     bool isSelected = false;
-    if (track.pt() < ConfTrkPtPrUp.value && track.pt() > ConfTrkPtPrDown.value && std::abs(track.eta()) < ConfTrkEta.value && std::abs(track.dcaXY())<ConfTrkDCAxy.value && std::abs(track.dcaZ())<ConfTrkDCAz.value) {
+    if (track.pt() < ConfTrkPtPrUp.value && track.pt() > ConfTrkPtPrDown.value && std::abs(track.eta()) < ConfTrkEta.value && std::abs(track.dcaXY()) < ConfTrkDCAxy.value && std::abs(track.dcaZ()) < ConfTrkDCAz.value) {
       if (track.tpcInnerParam() < ConfTrkPTPCPrThr.value && std::abs(track.tpcNSigmaPr()) < ConfTrkPrSigmaPID.value) {
         isSelected = true;
       }
@@ -221,7 +221,7 @@ struct CFFillterPPPhi {
   bool isSelectedTrackKaon(T const& track)
   {
     bool isSelected = false;
-    if (track.pt() < ConfTrkPtKaUp.value && track.pt() > ConfTrkPtKaDown.value && std::abs(track.eta()) < ConfTrkEta.value  && std::abs(track.dcaXY())<ConfTrkDCAxy.value && std::abs(track.dcaZ())<ConfTrkDCAz.value) {
+    if (track.pt() < ConfTrkPtKaUp.value && track.pt() > ConfTrkPtKaDown.value && std::abs(track.eta()) < ConfTrkEta.value && std::abs(track.dcaXY()) < ConfTrkDCAxy.value && std::abs(track.dcaZ()) < ConfTrkDCAz.value) {
       if (track.tpcInnerParam() < ConfTrkPTPCKaThr.value && std::abs(track.tpcNSigmaKa()) < ConfTrkKaSigmaPID.value) {
         isSelected = true;
       }
